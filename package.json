@@ -1,0 +1,32 @@
+{
+  "name": "ai-sachiko",
+  "version": "0.1.0",
+  "description": "幸子（サーチコネクション）- インテリジェント検索システム",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "start": "docker-compose up",
+    "dev": "docker-compose -f docker-compose.dev.yml up",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "keywords": [
+    "search",
+    "elasticsearch",
+    "nlp",
+    "vector-search"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
